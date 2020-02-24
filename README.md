@@ -41,15 +41,48 @@ number += 7;
 System.out.println(number);
 ```
 
+* Antwort: 
+```java
+2
+2.4
+19
+```
+
 ## Datentypen (5 Punkte)
 
 Welche Datentypen kennst du? 
 Gibt es Unterschiede bei der Verwendung zwischen einem `int` und einem `Integer`? 
+
+* Antwort a: 
+  * int = integer, ganze Zahlen bis zu einem gewissen Zahlenraum
+  * double = Kommazahlen
+  * long = langer integer, ebenfalls ganze Zahlen, aber mit einem größeren Zahlenraum
+  * String = Zeichenkette, wird mit "..." initialisiert
+  * char = einzelnes Zeichen, wird mit '...' initialisiert
+  * float = ebenfalls Kommazahlen
+  * boolean = kann 2 Werte haben, entweder true oder false
+* Antwort b: `int` ist ein primitiver Datentyp, `Integer` ein komplexer, so wie `String` ein komplexer Datentyp ist. Komplexe Datentypen werden für Wrapperklassen verwendet.
+
 
 ## Scope (5 Punkte) 
 
 Was ist der Scope einer Variable? 
 Erkläre anhand eines kleinen Beispielprogramms.
 
+* Antwort: Der Scope einer Variable ist der Lebensraum in welcher die Variable existiert. Variablen existieren immer nur innerhalb der geschwungenen Klammern, in denen sie deklariert werden. 
+Wenn man zum Beispiel, eine Variable innerhalb einer for-Schleife deklariert, wird sie außerhalb dieser Schleife nicht erkannt.
+* Beispiel: 
+```java
+public class Main {
 
+     public static void main(String[] args) {
 
+         for (int i = 0; i < 10; i++) {
+             
+         }
+
+         System.out.println(i);
+     }
+}
+```
+Erklärung: in dieser for-Schleife wird die Variable `i` deklariert und initialisiert. wird dieses Programm ausgeführt, so wird für das ```System.out.println(i)``` außerhalb der Schleife ein Fehler angezeigt, da für das Programm die Variable `i` außerhalb der Schleife nicht existiert.
